@@ -5,12 +5,12 @@ import * as Yup from 'yup';
 
 const validationSchema = Yup.object({
   name: Yup.string()
-    .min(3, 'Minimum 3 symbol')
-    .max(50, 'Maximum 50 symbol')
+    .min(3, 'Too short')
+    .max(50, 'Too long')
     .required('Required!'),
   number: Yup.string()
-    .min(3, 'Minimum 3 symbol')
-    .max(50, 'Maximum 50 symbol')
+    .min(3, 'Too short')
+    .max(50, 'Too long')
     .required('Required!'),
 });
 const ContactForm = ({ onAdd }) => {
